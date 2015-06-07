@@ -13,7 +13,7 @@ rm(data)
 DateTime <- paste(as.Date(newData$Date), newData$Time)
 newData$DateTime <- as.POSIXct(DateTime)
 
-# Draw a graph global active power for the selected days 
+# Draw a graph global active power for the selected days to generate plot 2
 # and save it as a png file with set image dimensions
 png("plot2.png",width=480, height=480, units="px")
 plot(newData$DateTime, newData$Global_active_power, type = "l",

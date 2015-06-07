@@ -13,7 +13,8 @@ rm(data)
 DateTime <- paste(as.Date(newData$Date), newData$Time)
 newData$DateTime <- as.POSIXct(DateTime)
 
-# Construct a histogram with and save it as a png file with set image dimensions
+# Construct a histogram with and save it as a png file with set image dimensions 
+# as plot 1
 png("plot1.png",width=480, height=480, units="px")
 hist(newData$Global_active_power, col = "red", main = paste("Global Active Power"), xlab = "Global Active Power (kilowatts)")
 dev.off()
